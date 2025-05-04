@@ -1,65 +1,81 @@
+
 # 🏥 Hospital Management System - Django Backend
 
 A RESTful API built with Django to manage doctors, patients, and medical records with secure access and authentication.
 
+---
+
 ## 🚀 Live API
 
-🌐 [https://hospital-management-qwg9.onrender.com](https://hospital-management-qwg9.onrender.com)
+🌐 **Deployed at:** [https://hospital-management-qwg9.onrender.com](https://hospital-management-qwg9.onrender.com)
 
 ---
 
 ## 📦 Features
 
-- Doctor Signup & Token-based Login
-- Add/View Patients (Doctor access only)
-- Add/View Medical Records (linked to Patients)
-- Custom permissions to restrict data access
+- 👨‍⚕️ Doctor Signup & Token-based Login
+- 🧑‍🤝‍🧑 Add/View Patients (Doctor access only)
+- 📝 Add/View Medical Records (linked to Patients)
+- 🔐 Custom permissions to restrict data access
 
----
+
 
 ## 🛠 Getting Started
 
 ### 1. Clone the Repository
 
-```bash 
+```bash
 git clone https://github.com/BunnyNukapeyya1/GreyScientificLabs--BackendAssignment
-
+cd GreyScientificLabs--BackendAssignment
+````
 
 ### 2. Create a Virtual Environment
 
 ```bash
 python -m venv env
-source env/bin/activate  # On Windows use: env\Scripts\activate
-
+source env/bin/activate  # On Windows: env\Scripts\activate
+```
 
 ### 3. Install Requirements
 
 ```bash
 pip install -r requirements.txt
+```
 
+### 4. Apply Migrations
+
+```bash
+python manage.py migrate
+```
+
+### 5. Create a Superuser (optional)
+
+```bash
+python manage.py createsuperuser
+```
+
+---
+
+## ▶ Running the Development Server
+
+Start the Django development server:
+
+```bash
+python manage.py runserver
+```
+
+Open your browser and visit:
+👉 [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
 
 ## 🧪 Running Tests
 
-Run all test cases using:
+To run the full test suite:
 
 ```bash
 python manage.py test
-
-
----
-
-## ▶ Running Development Server
-
-To start the local server:
-
-```bash
-python manage.py runserver
-
-
-Then open in your browser:  
-👉 [http://127.0.0.1:8000](http://127.0.0.1:8000)
+```
 
 ---
 
@@ -67,24 +83,27 @@ Then open in your browser:
 
 This project uses **Token Authentication**.
 
-After logging in via `/login`, use the returned token in headers for other requests:
+1. Login via the `/login` endpoint with valid credentials.
+2. Copy the token returned in the response.
+3. Include the token in the header for all protected requests:
 
-
+```
 Authorization: Token your_token_here
-
+```
 
 ---
 
 ## 📬 API Endpoints
 
 | Method | Endpoint                             | Description                             |
-|--------|--------------------------------------|-----------------------------------------|
-| POST   | `/signup`                            | Register a new user                     |
+| ------ | ------------------------------------ | --------------------------------------- |
+| POST   | `/signup`                            | Register a new doctor                   |
 | POST   | `/login`                             | Login and receive an auth token         |
 | POST   | `/patients`                          | Create a patient (Doctors only)         |
 | GET    | `/patients/all`                      | View patients added by logged-in doctor |
-| POST   | `/patients/records/add`              | Add medical record to a patient         |
+| POST   | `/patients/records/add`              | Add a medical record to a patient       |
 | GET    | `/patients/<int:patient_id>/records` | Get records for a specific patient      |
 
 ---
+
 
