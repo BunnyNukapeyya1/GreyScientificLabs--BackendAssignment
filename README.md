@@ -21,22 +21,21 @@ A RESTful API built with Django to manage doctors, patients, and medical records
 
 ### 1. Clone the Repository
 
-bash
-git clone https://github.com/your-username/hospital-management.git
-cd hospital-management
+'''bash 
+git clone https://github.com/BunnyNukapeyya1/GreyScientificLabs--BackendAssignment'''
 
 
 ### 2. Create a Virtual Environment
 
-bash
+'''bash
 python -m venv env
-source env/bin/activate  # On Windows use: env\Scripts\activate
+source env/bin/activate  # On Windows use: env\Scripts\activate'''
 
 
 ### 3. Install Requirements
 
-bash
-pip install -r requirements.txt
+'''bash
+pip install -r requirements.txt'''
 
 
 ---
@@ -45,8 +44,8 @@ pip install -r requirements.txt
 
 Run all test cases using:
 
-bash
-python manage.py test
+'''bash
+python manage.py test'''
 
 
 ---
@@ -55,8 +54,8 @@ python manage.py test
 
 To start the local server:
 
-bash
-python manage.py runserver
+'''bash
+python manage.py runserver'''
 
 
 Then open in your browser:  
