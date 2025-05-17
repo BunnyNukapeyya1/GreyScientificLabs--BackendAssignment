@@ -97,12 +97,12 @@ Authorization: Token your_token_here
 
 | Method | Endpoint                             | Description                             |
 | ------ | ------------------------------------ | --------------------------------------- |
-| POST   | `/signup`                            | Register a new doctor                   |
-| POST   | `/login`                             | Login and receive an auth token         |
-| POST   | `/patients`                          | Create a patient (Doctors only)         |
-| GET    | `/patients/all`                      | View patients added by logged-in doctor |
-| POST   | `/patients/records/add`              | Add a medical record to a patient       |
-| GET    | `/patients/<int:patient_id>/records` | Get records for a specific patient      |
+| POST   | `/api/signup`                            | Register a new doctor                   |
+| POST   | `/api/login`                             | Login and receive an auth token         |
+| POST   | `/api/patients`                          | Create a patient (Doctors only)         |
+| GET    | `/api/patients/all`                      | View patients added by logged-in doctor |
+| POST   | `/api/patients/records/add`              | Add a medical record to a patient       |
+| GET    | `/api/patients/<int:patient_id>/records` | Get records for a specific patient      |
 
 ---
 
